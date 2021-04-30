@@ -86,27 +86,24 @@
 	animation-name: fade;
 	animation-duration: 1.5s;
 }
-
-@
--webkit-keyframes fade {
+/* 
+@-webkit-keyframes fade {
 	from {opacity: .4
-}
+} */
 
 to {
 	opacity: 1
 }
 
-}
-@
-keyframes fade {
+
+/* @-keyframes fade {
 	from {opacity: .4
 }
-
+ */
 to {
 	opacity: 1
 }
 
-}
 #logo {
 	height: 90px;
 }
@@ -179,4 +176,9 @@ nav ul li:first-child {
 
 #connexionForm input {
 	display: inline-block;
+}
+#indicateur{
+	text-align: center;
+	margin: 0 auto;
+	height: 100px; 
 }
