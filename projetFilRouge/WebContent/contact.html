@@ -20,9 +20,6 @@
 	<nav>
 		<ul>
 			<li><a href="catalogue.html" title="catalogue">Catalogue</a></li>
-			<li><a href="#nousconnaitre" title="nous connaitre">Nous connaitre</a></li>
-			<li><a href="#certification" title="certifications">Certifications</a></li>
-			<li><a href="#infos" title="infos pratiques">Infos pratiques</a></li>
 			<li><a href="#contact" title="contact">Contact</a></li>
 			<li><input type="text" name="recherche" placeholder="Rechercher" title="Rechercher" /> 
 				<a href="#recherche" title="Rechercher">
@@ -35,34 +32,28 @@
 	</nav>
 
 
-	<form id="inscriptionForm">
-		<fieldset>
-			<legend>contact</legend>
+	<form id="contactForm">
 			<p>
-				<label>civilit&eacute;</label> <input type="radio" name="civilite"
+				<label id="civilite">Civilit&eacute;</label> <input type="radio" name="civilite"
 					value="h" />Mr <input type="radio" name="civilite" value="femme" />Mme
 			
 			<p>
-				<label>Nom:</label><input type="text" name="nom" />
+				<label>Nom:</label><input type="text" name="nom" placeholder="Nom"/>
 			</p>
 			<p>
-				<label>Prenom:</label><input type="text" name="prenom" />
+				<label>Prenom:</label><input type="text" name="prenom" placeholder="Pr&eacute;nom" />
 			</p>
 			<p>
-				<label>Organisation:</label><input type="text" name="organisation" />
+				<label>Organisation:</label><input type="text" name="organisation" placeholder="Organisation"/>
 			</p>
 			<p>
-				<label>Mail:</label><input type="text" name="mail" />
+				<label>Mail:</label><input type="text" name="mail" placeholder="Mail"/>
 			</p>
 
-		</fieldset>
-		<fieldset>
 			<p>
-				<label>Message: <input id="message"   type="text" name="message" ></label>
-
-			</p>
-		</fieldset>
-		<input type="submit" value="envoyer" />
+				<label>Message: </label><br/>
+				<textarea name="message" cols="40" rows="9" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Votre message"></textarea>			</p>
+		<input type="submit" value="Envoyer" />
 	</form>
 </body>
 </html>

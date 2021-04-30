@@ -20,9 +20,6 @@
 	<nav>
 		<ul>
 			<li><a href="catalogue.html" title="catalogue">Catalogue</a></li>
-			<li><a href="#nousconnaitre" title="nous connaitre">Nous connaitre</a></li>
-			<li><a href="#certification" title="certifications">Certifications</a></li>
-			<li><a href="#infos" title="infos pratiques">Infos pratiques</a></li>
 			<li><a href="#contact" title="contact">Contact</a></li>
 			<li><input type="text" name="recherche" placeholder="Rechercher" title="Rechercher" /> 
 				<a href="#recherche" title="Rechercher">
@@ -60,7 +57,7 @@
 			<legend>Descriptif</legend>
 			<p id="ojectif">
 			<h4>Ojectifs</h4>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. 		Lorem ipsum dolor sit amet, consectetur adipiscing elit		Lorem ipsum dolor sit amet, consectetur adipiscing elit
 			</p>
 			<p id="preRequis">
 			<h4>Pr&eacute;-requis</h4>
@@ -76,16 +73,20 @@
 			</p>
 
 		</fieldset>
-		<label>Ville</label> <select id="ville">
+		<div id="infoSession">
+		<p><label>Ville</label></p>
+		<p> <select id="ville">
 			<option value=""></option>
 			<option value="paris">Paris</option>
 			<option value="toulouse">Toulouse</option>
 			<option value="marseille">Marseille</option>
 		</select> 
-		<label>Date des sessions</label>
-			<input type="date" />
+		</p>
+		<p><label>Date des sessions</label></p>
+			<p><input type="date" /></p>
 
 		<input type="submit" value="S'enregistrer en ligne" />
+		</div>
 	</form>
 
 </body>

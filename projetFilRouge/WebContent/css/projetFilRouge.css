@@ -1,7 +1,13 @@
 @charset "UTF-8";
 
 * {
-	box-sizing: border-box
+	box-sizing: border-box;
+	font-family: Ubuntu, sans-serif;
+}
+
+@font-face {
+ font-family: "Ubuntu";
+ src: url("http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin");
 }
 
 /* Slideshow container */
@@ -116,14 +122,24 @@ to {
 }
 
 nav {
-	background-color: #7ba8ea;
+	background-color: #1b75bb;
 	text-align: center;
+	font-family: Ubuntu, sans-serif;
+}
+
+#rechercher {
+	height: 2em;
+	font-family: Ubuntu, sans-serif;
+	padding-top: 20px;
+	padding-bottom: 15px;
 }
 
 nav ul {
 	margin-top: 0px;
 	margin-bottom: 0px;
+	padding-bottom:0.5%;
 	padding-left: 0px;
+	padding-top: 0.5%;
 }
 
 nav ul li {
@@ -131,7 +147,6 @@ nav ul li {
 }
 
 nav ul li:hover {
-	background-color: red;
 	cursor: pointer;
 }
 
@@ -143,7 +158,6 @@ nav ul li:hover a {
 nav ul li a {
 	text-decoration: none; /*suppression du soulignage du lien*/
 	color: white;
-	text-shadow: 1px 1px 1px black;
 	font-size: 1.8em;
 }
 
@@ -165,7 +179,6 @@ nav ul li:first-child {
 
 #connexionForm {
 	text-align: center;
-
 }
 
 #connexionForm label {
@@ -181,4 +194,76 @@ nav ul li:first-child {
 	text-align: center;
 	margin: 0 auto;
 	height: 100px; 
+}
+
+/*page catalogue*/
+#descriptif {
+	float : left;
+	max-width: 70%
+}
+
+#infoSession{
+	float: right;
+	margin-right: 5%;
+	
+}
+
+/*page connexion OK*/
+#pagesIntranet{
+	text-align: center;
+}
+
+#pagesIntranet a{
+	display:inline-block;
+	margin: 0 auto;
+	width:250px;
+	text-align:center;
+	background-color: #1b75bb;
+	color:white;
+	text-decoration:none;
+	border-radius: 5px;
+	padding: 25px;
+}
+
+#pagesIntranet a:hover {
+	cursor: pointer;
+	background-color: buttonshadow;
+}
+
+/*page contact*/
+#contactForm {
+	text-align: center;
+}
+
+#contactForm label {
+	display: inline-block;
+	width: 15%;
+	font-weight: bold;
+}
+
+#contactForm input {
+	display: inline-block;
+}
+
+#civilite {
+	margin-right: 35px;
+}
+
+/*page crm*/
+#indicateur tr td {
+	display:inline-block;
+	margin: 0 auto;
+	height: 100px;
+	width:250px;
+	text-align:center;
+	background-color: #1b75bb;
+	color:white;
+	text-decoration:none;
+	border-radius: 5px;
+	padding: 5%;
+}
+
+#remontee ul li {
+	display:inline;
+	text-align: center;
 }
