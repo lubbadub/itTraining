@@ -39,24 +39,27 @@
 		<h1>Session XYZ</h1>
 		<p>1 : médiocre 5: excellent</p>
 	</div>
-	<select id="monselect">
+	<p><select id="monselect">
 		<option value="valeur1">Jean Bont</option>
 		<option value="valeur2" selected>Claud Haut</option>
 		<option value="valeur3">Rémi Molle</option>
-	</select>
-	<h2>Evaluation Accueil</h2>
-
-	<div>
-		<input type="radio" id="1" name="accueil" value="1"> <label
+	</select></p>
+	
+	<form action="#evaluation" id="evalForm" method="post">
+	<fieldset id="evals">
+	
+		<div id="evalAccueil">
+			<label>Evaluation Accueil</label>
+		<p><input type="radio" id="1" name="accueil" value="1"> <label
 			for="1">1</label> <input type="radio" id="2" name="accueil" value="2">
 		<label for="2">2</label> <input type="radio" id="3" name="accueil"
 			value="3"> <label for="3">3</label> <input type="radio"
 			id="4" name="accueil" value="4"> <label for="4">4</label> <input
 			type="radio" id="5" name="accueil" value="5"> <label for="5">5</label>
-	</div>
-	<h2>Evaluation Environnement</h2>
-	<div>
-		<input type="radio" id="1" name="environnement" value="1"> <label
+		</p></div>
+	<div id="evalEnvironnement">
+	<label>Evaluation Environnement</label>
+		<p><input type="radio" id="1" name="environnement" value="1"> <label
 			for="1">1</label> <input type="radio" id="2" name="environnement"
 			value="2"> <label for="2">2</label> <input type="radio"
 			id="3" name="environnement" value="3"> <label for="3">3</label>
@@ -64,29 +67,30 @@
 		<input type="radio" id="4" name="environnement" value="4"> <label
 			for="4">4</label> <input type="radio" id="5" name="environnement"
 			value="5"> <label for="5">5</label>
-	</div>
+	</p></div>
 
-	<h2>Evaluation contenu</h2>
-	<div>
-		<input type="radio" id="1" name="contenu" value="1"> <label
+	<div id="evalContenu">
+	<label>Evaluation contenu</label>
+		<p><input type="radio" id="1" name="contenu" value="1"> <label
 			for="1">1</label> <input type="radio" id="2" name="contenu" value="2">
 		<label for="2">2</label> <input type="radio" id="3" name="contenu"
 			value="3"> <label for="3">3</label> <input type="radio"
 			id="4" name="contenu" value="4"> <label for="4">4</label> <input
 			type="radio" id="5" name="contenu" value="5"> <label for="5">5</label>
-	</div>
+	</p></div>
 
-	<h2>Evaluation formateur</h2>
-	<div>
+	<div id="evalFormateur">
+	<label>Evaluation formateur</label><p>
 		<input type="radio" id="1" name="formateur" value="1"> <label
 			for="1">1</label> <input type="radio" id="2" name="formateur"
 			value="2"> <label for="2">2</label> <input type="radio"
 			id="3" name="formateur" value="3"> <label for="3">3</label> <input
 			type="radio" id="4" name="formateur" value="4"> <label
 			for="4">4</label> <input type="radio" id="5" name="formateur"
-			value="5"> <label for="5">5</label>
+			value="5"> <label for="5">5</label></p>
 	</div>
-
-	<input type="submit" value="Soumettre">
+	</fieldset>
+	<input type="submit" value="Soumettre" id="soumettre">
+	</form>
 </body>
 </html>

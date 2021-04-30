@@ -31,10 +31,11 @@
 		</ul>
 	</nav>
 	
-	<h2>Monitoring des sessions</h2>
-	
+	<fieldset id="monitoring">
+	 <legend><h2>Monitoring des sessions</h2></legend>
+	 <div id="session">
 	<p>
-		<label>Choix de la session</label>
+		<label>Choix de la session :</label>
 			<select id="choixFormationMonitorer">
 				<option value=""></option>
 				<option value="formation1">Formation 1</option>
@@ -44,32 +45,35 @@
 	</p>
 	
 	<p>
-		<label>Salle install&eacute;e</label>
+		<label>Salle install&eacute;e : </label>
 		<input type="checkbox"/>
 	</p>
 		
 	<p>
-		<label>Formateur confirm&eacute;</label>
+		<label>Formateur confirm&eacute; : </label>
 		<input type="checkbox"/>
 	</p>	
 	
 	<p>
-		<label>Support imprim&eacute;</label>
+		<label>Support imprim&eacute; : </label>
 		<input type="checkbox"/>
-	</p>	
-	
+	</p>
+	</div>	
+	<div id="date">
 	<p>
-		<label>Date de d&eacute;but</label>
+		<label>Date de d&eacute;but : </label>
 		<input type="date"/>
 	</p>	
 	
 	<p>
-		<label>Date de fin</label>
+		<label>Date de fin : </label>
 		<input type="date"/>
-	</p>	
-	
+	</p></div>
+		
+		</fieldset>
+		<fieldset id="salle">
 	<p>
-		<label>Evaluations stagiaires</label>
+		<label>Evaluations stagiaires : </label>
 			<select id="evalStagiaires">
 				<option value=""></option>
 				<option value="stagiaire1">Stagiaire 1</option>
@@ -79,7 +83,7 @@
 	</p>
 	
 	<p>
-		<label>Alertes</label>
+		<label>Alertes : </label>
 			<select id="alertes">
 				<option value=""></option>
 				<option value="alerte1">Alerte 1</option>
@@ -87,6 +91,6 @@
 				<option value="alerte3">Alerte 3</option>
 			</select>
 	</p>
-	
+</fieldset>
 </body>
 </html>

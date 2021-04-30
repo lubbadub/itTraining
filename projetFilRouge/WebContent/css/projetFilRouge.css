@@ -6,8 +6,9 @@
 }
 
 @font-face {
- font-family: "Ubuntu";
- src: url("http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin");
+	font-family: "Ubuntu";
+	src:
+		url("http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin");
 }
 
 /* Slideshow container */
@@ -96,11 +97,9 @@
 @-webkit-keyframes fade {
 	from {opacity: .4
 } */
-
 to {
 	opacity: 1
 }
-
 
 /* @-keyframes fade {
 	from {opacity: .4
@@ -137,7 +136,7 @@ nav {
 nav ul {
 	margin-top: 0px;
 	margin-bottom: 0px;
-	padding-bottom:0.5%;
+	padding-bottom: 0.5%;
 	padding-left: 0px;
 	padding-top: 0.5%;
 }
@@ -190,37 +189,37 @@ nav ul li:first-child {
 #connexionForm input {
 	display: inline-block;
 }
-#indicateur{
+
+#indicateur {
 	text-align: center;
 	margin: 0 auto;
-	height: 100px; 
+	height: 100px;
 }
 
 /*page catalogue*/
 #descriptif {
-	float : left;
+	float: left;
 	max-width: 70%
 }
 
-#infoSession{
+#infoSession {
 	float: right;
 	margin-right: 5%;
-	
 }
 
 /*page connexion OK*/
-#pagesIntranet{
+#pagesIntranet {
 	text-align: center;
 }
 
-#pagesIntranet a{
-	display:inline-block;
+#pagesIntranet a {
+	display: inline-block;
 	margin: 0 auto;
-	width:250px;
-	text-align:center;
+	width: 250px;
+	text-align: center;
 	background-color: #1b75bb;
-	color:white;
-	text-decoration:none;
+	color: white;
+	text-decoration: none;
 	border-radius: 5px;
 	padding: 25px;
 }
@@ -251,19 +250,85 @@ nav ul li:first-child {
 
 /*page crm*/
 #indicateur tr td {
-	display:inline-block;
+	display: inline-block;
 	margin: 0 auto;
 	height: 100px;
-	width:250px;
-	text-align:center;
+	width: 250px;
+	text-align: center;
 	background-color: #1b75bb;
-	color:white;
-	text-decoration:none;
+	color: white;
+	text-decoration: none;
 	border-radius: 5px;
 	padding: 5%;
 }
 
 #remontee ul li {
-	display:inline;
+	display: inline;
 	text-align: center;
+}
+
+/*page enregistrement en ligne*/
+#enregistrementForm {
+	text-align: center;
+}
+
+#enregistrementForm label {
+	display: inline-block;
+	width: 25%;
+	font-weight: bold;
+}
+
+#enregistrementForm input {
+	display: inline-block;
+	margin-right: 10%;
+}
+
+/*page evaluation*/
+
+#evals>div>label {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+#eval>div {
+	display: inline-block;
+	text-align: center;
+	padding: 20%;
+}
+
+#evalForm {
+	text-align: center;
+	padding: 5%;
+}
+
+/*page logistique*/
+body>section>fieldset>p>label {
+	font-weight: bold;
+}
+
+#logistique {
+	text-align: center;
+	margin: 0 auto;
+}
+/*page monitoring*/
+#monitoring{
+	text-align: center; 
+	margin: 0 auto; 
+	padding-bottom: 30px; 
+	/* display: inline-block; */ 
+}
+#salle{
+	text-align: center; 
+	margin: 0 auto; 
+	padding-bottom: 30px; 
+	
+}
+/* #date2 {
+	float: right;
+} */
+#date {
+	float: right;
+}
+#session{
+	float: left;
 }
