@@ -3,36 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <script type="text/javascript" src="js/projetFilRouge.js"></script>
-<title>IT Training - Catalogue</title>
+<title>IT Training - Evaluation</title>
 <link rel="stylesheet" type="text/css" href="css/projetFilRouge.css">
 </head>
 <body onload="initPage()">
 	<header>
-		<a href="index.html"><img id="logo" alt="It training" src="images/IT_Training_logo-transparent.png" /></a> 
-		<a href="connexion.html" title="connexion">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16" id="user">
+		<a href="index.html"><img id="logo" alt="It training"
+			src="images/IT_Training_logo-transparent.png" /></a> <a
+			href="connexion.html" title="connexion"> <svg
+				xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+				class="bi bi-person-circle" viewBox="0 0 16 16" id="user">
 				<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-				<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+				<path fill-rule="evenodd"
+					d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
 			</svg>
 		</a>
 	</header>
-	
+
 	<nav>
 		<ul>
 			<li><a href="catalogue.html" title="catalogue">Catalogue</a></li>
-			<li><a href="#nousconnaitre" title="nous connaitre">Nous connaitre</a></li>
+			<li><a href="#nousconnaitre" title="nous connaitre">Nous
+					connaitre</a></li>
 			<li><a href="#certification" title="certifications">Certifications</a></li>
 			<li><a href="#infos" title="infos pratiques">Infos pratiques</a></li>
 			<li><a href="contact.html" title="contact">Contact</a></li>
-			<li><input type="text" name="recherche" placeholder="Rechercher" title="Rechercher" /> 
-				<a href="#recherche" title="Rechercher">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-	  					<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-					</svg> 
-				</a>
-			</li>
+			<li><input type="text" name="recherche" placeholder="Rechercher"
+				title="Rechercher" /> <a href="#recherche" title="Rechercher">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+						fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+	  					<path
+							d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+					</svg>
+			</a></li>
 		</ul>
 	</nav>
-	
+
+	<div>
+		<h1>Session XYZ</h1>
+		<p>1 : médiocre 5: excellent</p>
+	</div>
+	<select id="monselect">
+		<option value="valeur1">Jean Bont</option>
+		<option value="valeur2" selected>Claud Haut</option>
+		<option value="valeur3">Rémi Molle</option>
+	</select>
+	<h2>Evaluation Accueil</h2>
+
+	<div>
+		<input type="radio" id="1" name="accueil" value="1"> <label
+			for="1">1</label> <input type="radio" id="2" name="accueil" value="2">
+		<label for="2">2</label> <input type="radio" id="3" name="accueil"
+			value="3"> <label for="3">3</label> <input type="radio"
+			id="4" name="accueil" value="4"> <label for="4">4</label> <input
+			type="radio" id="5" name="accueil" value="5"> <label for="5">5</label>
+	</div>
+	<h2>Evaluation Environnement</h2>
+	<div>
+		<input type="radio" id="1" name="environnement" value="1"> <label
+			for="1">1</label> <input type="radio" id="2" name="environnement"
+			value="2"> <label for="2">2</label> <input type="radio"
+			id="3" name="environnement" value="3"> <label for="3">3</label>
+
+		<input type="radio" id="4" name="environnement" value="4"> <label
+			for="4">4</label> <input type="radio" id="5" name="environnement"
+			value="5"> <label for="5">5</label>
+	</div>
+
+	<h2>Evaluation contenu</h2>
+	<div>
+		<input type="radio" id="1" name="contenu" value="1"> <label
+			for="1">1</label> <input type="radio" id="2" name="contenu" value="2">
+		<label for="2">2</label> <input type="radio" id="3" name="contenu"
+			value="3"> <label for="3">3</label> <input type="radio"
+			id="4" name="contenu" value="4"> <label for="4">4</label> <input
+			type="radio" id="5" name="contenu" value="5"> <label for="5">5</label>
+	</div>
+
+	<h2>Evaluation formateur</h2>
+	<div>
+		<input type="radio" id="1" name="formateur" value="1"> <label
+			for="1">1</label> <input type="radio" id="2" name="formateur"
+			value="2"> <label for="2">2</label> <input type="radio"
+			id="3" name="formateur" value="3"> <label for="3">3</label> <input
+			type="radio" id="4" name="formateur" value="4"> <label
+			for="4">4</label> <input type="radio" id="5" name="formateur"
+			value="5"> <label for="5">5</label>
+	</div>
+
+	<input type="submit" value="Soumettre">
 </body>
 </html>
