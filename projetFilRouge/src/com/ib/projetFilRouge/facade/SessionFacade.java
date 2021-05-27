@@ -1,0 +1,52 @@
+package com.ib.projetFilRouge.facade;
+
+import java.util.List;
+
+import com.ib.projetFilRouge.bo.Session;
+import com.ib.projetFilRouge.dao.ISessionDAO;
+
+public class SessionFacade implements ISessionFacade {
+
+	private ISessionDAO sessionDAO = null;
+
+	public SessionFacade() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public List<Session> findAll() {
+		List<Session> sessions = null;
+
+		// appel à la couche DAO
+		sessions = sessionDAO.findAll();
+
+		return sessions;
+	}
+
+	@Override
+	public void delete(Session session) {
+		sessionDAO.delete(session);
+
+	}
+
+	@Override
+	public Session update(Session session) {
+		Session sessionUpdate = sessionDAO.update(session);
+		return sessionUpdate;
+	}
+
+	@Override
+	public Session save(Session session) {
+		Session sessionSave = sessionDAO.save(session);
+		return sessionSave;
+
+	}
+
+	@Override
+	public Session get(Integer id) {
+		Session session = sessionDAO.get(id);
+		return session;
+	}
+
+}

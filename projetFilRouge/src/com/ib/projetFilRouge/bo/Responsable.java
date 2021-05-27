@@ -1,49 +1,89 @@
 package com.ib.projetFilRouge.bo;
 
 public class Responsable {
-	
-	private int idResponsable;
-	private String nomResponsable;
-	private String prenomResponsable;
-	private String fonctionResponsable;
-	public int getIdResponsable() {
-		return idResponsable;
-	}
-	public void setIdResponsable(int idResponsable) {
-		this.idResponsable = idResponsable;
-	}
-	public String getNomResponsable() {
-		return nomResponsable;
-	}
-	public void setNomResponsable(String nomResponsable) {
-		this.nomResponsable = nomResponsable;
-	}
-	public String getPrenomResponsable() {
-		return prenomResponsable;
-	}
-	public void setPrenomResponsable(String prenomResponsable) {
-		this.prenomResponsable = prenomResponsable;
-	}
-	public String getFonctionResponsable() {
-		return fonctionResponsable;
-	}
-	public void setFonctionResponsable(String fonctionResponsable) {
-		this.fonctionResponsable = fonctionResponsable;
-	}
-	public Responsable(int idResponsable, String nomResponsable, String prenomResponsable, String fonctionResponsable) {
+
+	private Integer id;
+	private String nom;
+	private String prenom;
+	private String fonction;
+
+	/**
+	 * @param id
+	 * @param nom
+	 * @param prenom
+	 * @param fonction
+	 */
+	public Responsable(Integer id, String nom, String prenom, String fonction) {
 		super();
-		this.idResponsable = idResponsable;
-		this.nomResponsable = nomResponsable;
-		this.prenomResponsable = prenomResponsable;
-		this.fonctionResponsable = fonctionResponsable;
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.fonction = fonction;
 	}
+
 	public Responsable() {
-		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-	
-	
+
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the nom
+	 */
+	public String getNom() {
+		return nom;
+	}
+
+	/**
+	 * @param nom the nom to set
+	 */
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	/**
+	 * @return the prenom
+	 */
+	public String getPrenom() {
+		return prenom;
+	}
+
+	/**
+	 * @param prenom the prenom to set
+	 */
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	/**
+	 * @return the fonction
+	 */
+	public String getFonction() {
+		return fonction;
+	}
+
+	/**
+	 * @param fonction the fonction to set
+	 */
+	public void setFonction(String fonction) {
+		this.fonction = fonction;
+	}
+
+	@Override
+	public String toString() {
+		return "Responsable [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", fonction=" + fonction + "]";
+	}
 
 }

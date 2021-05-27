@@ -4,89 +4,176 @@ import java.util.Date;
 
 public class Formateur {
 
-	private int idFormateur;
-	private String nomFormateur;
-	private String prenomFormateur;
-	private String mailFormateur;
-	private String adrFormateur;
-	private String telFormateur;
+	private Integer id;
+	private String nom;
+	private String prenom;
+	private String mail;
+	private String adr;
+	private String tel;
 	private Date datePremiereSession;
-	private float tarifFormateur;
-	private boolean isNouveau;
-	public int getIdFormateur() {
-		return idFormateur;
+	private double formateur;
+	private Boolean isNouveau;
+
+	/**
+	 * @param id
+	 * @param nom
+	 * @param prenom
+	 * @param mail
+	 * @param adr
+	 * @param tel
+	 * @param datePremiereSession
+	 * @param formateur
+	 * @param isNouveau
+	 */
+	public Formateur(Integer id, String nom, String prenom, String mail, String adr, String tel,
+			Date datePremiereSession, double formateur, Boolean isNouveau) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.mail = mail;
+		this.adr = adr;
+		this.tel = tel;
+		this.datePremiereSession = datePremiereSession;
+		this.formateur = formateur;
+		this.isNouveau = isNouveau;
 	}
-	public void setIdFormateur(int idFormateur) {
-		this.idFormateur = idFormateur;
+
+	public Formateur() {
+		// TODO Auto-generated constructor stub
 	}
-	public String getNomFormateur() {
-		return nomFormateur;
+
+	@Override
+	public String toString() {
+		return "Formateur [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", mail=" + mail + ", adr=" + adr
+				+ ", tel=" + tel + ", datePremiereSession=" + datePremiereSession + ", formateur=" + formateur
+				+ ", isNouveau=" + isNouveau + "]";
 	}
-	public void setNomFormateur(String nomFormateur) {
-		this.nomFormateur = nomFormateur;
+
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
 	}
-	public String getPrenomFormateur() {
-		return prenomFormateur;
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
 	}
-	public void setPrenomFormateur(String prenomFormateur) {
-		this.prenomFormateur = prenomFormateur;
+
+	/**
+	 * @return the nom
+	 */
+	public String getNom() {
+		return nom;
 	}
-	public String getMailFormateur() {
-		return mailFormateur;
+
+	/**
+	 * @param nom the nom to set
+	 */
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
-	public void setMailFormateur(String mailFormateur) {
-		this.mailFormateur = mailFormateur;
+
+	/**
+	 * @return the prenom
+	 */
+	public String getPrenom() {
+		return prenom;
 	}
-	public String getAdrFormateur() {
-		return adrFormateur;
+
+	/**
+	 * @param prenom the prenom to set
+	 */
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
 	}
-	public void setAdrFormateur(String adrFormateur) {
-		this.adrFormateur = adrFormateur;
+
+	/**
+	 * @return the mail
+	 */
+	public String getMail() {
+		return mail;
 	}
-	public String getTelFormateur() {
-		return telFormateur;
+
+	/**
+	 * @param mail the mail to set
+	 */
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
-	public void setTelFormateur(String telFormateur) {
-		this.telFormateur = telFormateur;
+
+	/**
+	 * @return the adr
+	 */
+	public String getAdr() {
+		return adr;
 	}
+
+	/**
+	 * @param adr the adr to set
+	 */
+	public void setAdr(String adr) {
+		this.adr = adr;
+	}
+
+	/**
+	 * @return the tel
+	 */
+	public String getTel() {
+		return tel;
+	}
+
+	/**
+	 * @param tel the tel to set
+	 */
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+
+	/**
+	 * @return the datePremiereSession
+	 */
 	public Date getDatePremiereSession() {
 		return datePremiereSession;
 	}
+
+	/**
+	 * @param datePremiereSession the datePremiereSession to set
+	 */
 	public void setDatePremiereSession(Date datePremiereSession) {
 		this.datePremiereSession = datePremiereSession;
 	}
-	public float getTarifFormateur() {
-		return tarifFormateur;
+
+	/**
+	 * @return the formateur
+	 */
+	public double getFormateur() {
+		return formateur;
 	}
-	public void setTarifFormateur(float tarifFormateur) {
-		this.tarifFormateur = tarifFormateur;
+
+	/**
+	 * @param formateur the formateur to set
+	 */
+	public void setFormateur(double formateur) {
+		this.formateur = formateur;
 	}
-	public boolean isNouveau() {
+
+	/**
+	 * @return the isNouveau
+	 */
+	public Boolean getIsNouveau() {
 		return isNouveau;
 	}
-	public void setNouveau(boolean isNouveau) {
+
+	/**
+	 * @param isNouveau the isNouveau to set
+	 */
+	public void setIsNouveau(Boolean isNouveau) {
 		this.isNouveau = isNouveau;
 	}
-	public Formateur(int idFormateur, String nomFormateur, String prenomFormateur, String mailFormateur,
-			String adrFormateur, String telFormateur, Date datePremiereSession, float tarifFormateur,
-			boolean isNouveau) {
-		super();
-		this.idFormateur = idFormateur;
-		this.nomFormateur = nomFormateur;
-		this.prenomFormateur = prenomFormateur;
-		this.mailFormateur = mailFormateur;
-		this.adrFormateur = adrFormateur;
-		this.telFormateur = telFormateur;
-		this.datePremiereSession = datePremiereSession;
-		this.tarifFormateur = tarifFormateur;
-		this.isNouveau = isNouveau;
-	}
-	public Formateur() {
-		super();
-	}
-	
-	
-	
-	
-	
+
 }

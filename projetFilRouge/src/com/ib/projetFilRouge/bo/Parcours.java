@@ -1,56 +1,107 @@
 package com.ib.projetFilRouge.bo;
 
 public class Parcours {
-	
-	private int idParcours;
-	private String nomParcours;
-	private boolean isIntra;
-	private boolean isInter;
-	private int idResponsable;
-	public int getIdParcours() {
-		return idParcours;
+
+	private Integer id;
+	private String nom;
+	private Boolean isIntra;
+	private Boolean isInter;
+	private Responsable responsable;
+
+	public Parcours() {
+		// TODO Auto-generated constructor stub
 	}
-	public void setIdParcours(int idParcours) {
-		this.idParcours = idParcours;
+
+	/**
+	 * @param id
+	 * @param nom
+	 * @param isIntra
+	 * @param isInter
+	 * @param responsable
+	 */
+	public Parcours(Integer id, String nom, Boolean isIntra, Boolean isInter, Responsable responsable) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.isIntra = isIntra;
+		this.isInter = isInter;
+		this.responsable = responsable;
 	}
-	public String getNomParcours() {
-		return nomParcours;
+
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
 	}
-	public void setNomParcours(String nomParcours) {
-		this.nomParcours = nomParcours;
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
 	}
-	public boolean isIntra() {
+
+	/**
+	 * @return the nom
+	 */
+	public String getNom() {
+		return nom;
+	}
+
+	/**
+	 * @param nom the nom to set
+	 */
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	/**
+	 * @return the isIntra
+	 */
+	public Boolean getIsIntra() {
 		return isIntra;
 	}
-	public void setIntra(boolean isIntra) {
+
+	/**
+	 * @param isIntra the isIntra to set
+	 */
+	public void setIsIntra(Boolean isIntra) {
 		this.isIntra = isIntra;
 	}
-	public boolean isInter() {
+
+	/**
+	 * @return the isInter
+	 */
+	public Boolean getIsInter() {
 		return isInter;
 	}
-	public void setInter(boolean isInter) {
+
+	/**
+	 * @param isInter the isInter to set
+	 */
+	public void setIsInter(Boolean isInter) {
 		this.isInter = isInter;
 	}
-	public int getIdResponsable() {
-		return idResponsable;
+
+	/**
+	 * @return the responsable
+	 */
+	public Responsable getResponsable() {
+		return responsable;
 	}
-	public void setIdResponsable(int idResponsable) {
-		this.idResponsable = idResponsable;
+
+	/**
+	 * @param responsable the responsable to set
+	 */
+	public void setResponsable(Responsable responsable) {
+		this.responsable = responsable;
 	}
-	public Parcours(int idParcours, String nomParcours, boolean isIntra, boolean isInter, int idResponsable) {
-		super();
-		this.idParcours = idParcours;
-		this.nomParcours = nomParcours;
-		this.isIntra = isIntra;
-		this.isInter = isInter;
-		this.idResponsable = idResponsable;
+
+	@Override
+	public String toString() {
+		return "Parcours [id=" + id + ", nom=" + nom + ", isIntra=" + isIntra + ", isInter=" + isInter
+				+ ", responsable=" + responsable + "]";
 	}
-	public Parcours() {
-		super();
-	}
-	
-	
-	
-	
 
 }

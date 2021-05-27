@@ -2,64 +2,123 @@ package com.ib.projetFilRouge.bo;
 
 public class Module {
 
-	private int idModule;
-	private String nomModule;
-	private float prixHtModule;
-	private String objectifModule;
-	private String prerequisModule;
-	private String programmeModule;
-	public int getIdModule() {
-		return idModule;
-	}
-	public void setIdModule(int idModule) {
-		this.idModule = idModule;
-	}
-	public String getNomModule() {
-		return nomModule;
-	}
-	public void setNomModule(String nomModule) {
-		this.nomModule = nomModule;
-	}
-	public float getPrixHtModule() {
-		return prixHtModule;
-	}
-	public void setPrixHtModule(float prixHtModule) {
-		this.prixHtModule = prixHtModule;
-	}
-	public String getObjectifModule() {
-		return objectifModule;
-	}
-	public void setObjectifModule(String objectifModule) {
-		this.objectifModule = objectifModule;
-	}
-	public String getPrerequisModule() {
-		return prerequisModule;
-	}
-	public void setPrerequisModule(String prerequisModule) {
-		this.prerequisModule = prerequisModule;
-	}
-	public String getProgrammeModule() {
-		return programmeModule;
-	}
-	public void setProgrammeModule(String programmeModule) {
-		this.programmeModule = programmeModule;
-	}
-	public Module(int idModule, String nomModule, float prixHtModule, String objectifModule, String prerequisModule,
-			String programmeModule) {
-		super();
-		this.idModule = idModule;
-		this.nomModule = nomModule;
-		this.prixHtModule = prixHtModule;
-		this.objectifModule = objectifModule;
-		this.prerequisModule = prerequisModule;
-		this.programmeModule = programmeModule;
-	}
+	private Integer id;
+	private String nom;
+	private Float prixHT;
+	private String objectif;
+	private String prerequis;
+	private String programme;
+
 	public Module() {
-		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-	
-	
+
+	/**
+	 * @param id
+	 * @param nom
+	 * @param prixHT
+	 * @param objectif
+	 * @param prerequis
+	 * @param programme
+	 */
+	public Module(Integer id, String nom, Float prixHT, String objectif, String prerequis, String programme) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prixHT = prixHT;
+		this.objectif = objectif;
+		this.prerequis = prerequis;
+		this.programme = programme;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the nom
+	 */
+	public String getNom() {
+		return nom;
+	}
+
+	/**
+	 * @param nom the nom to set
+	 */
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	/**
+	 * @return the prixHT
+	 */
+	public Float getPrixHT() {
+		return prixHT;
+	}
+
+	/**
+	 * @param prixHT the prixHT to set
+	 */
+	public void setPrixHT(Float prixHT) {
+		this.prixHT = prixHT;
+	}
+
+	/**
+	 * @return the objectif
+	 */
+	public String getObjectif() {
+		return objectif;
+	}
+
+	/**
+	 * @param objectif the objectif to set
+	 */
+	public void setObjectif(String objectif) {
+		this.objectif = objectif;
+	}
+
+	/**
+	 * @return the prerequis
+	 */
+	public String getPrerequis() {
+		return prerequis;
+	}
+
+	/**
+	 * @param prerequis the prerequis to set
+	 */
+	public void setPrerequis(String prerequis) {
+		this.prerequis = prerequis;
+	}
+
+	/**
+	 * @return the programme
+	 */
+	public String getProgramme() {
+		return programme;
+	}
+
+	/**
+	 * @param programme the programme to set
+	 */
+	public void setProgramme(String programme) {
+		this.programme = programme;
+	}
+
+	@Override
+	public String toString() {
+		return "Module [id=" + id + ", nom=" + nom + ", prixHT=" + prixHT + ", objectif=" + objectif + ", prerequis="
+				+ prerequis + ", programme=" + programme + "]";
+	}
+
 }

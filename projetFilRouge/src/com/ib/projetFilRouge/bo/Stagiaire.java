@@ -2,67 +2,108 @@ package com.ib.projetFilRouge.bo;
 
 public class Stagiaire {
 
-	private int idStagiaire;
-	private String nomStagiaire;
-	private String prenomStagiaire;
-	private String mailStagiaire;
-	private String telStagiaire;
-	private int idEntreprise;
-	public int getIdStagiaire() {
-		return idStagiaire;
-	}
-	public void setIdStagiaire(int idStagiaire) {
-		this.idStagiaire = idStagiaire;
-	}
-	public String getNomStagiaire() {
-		return nomStagiaire;
-	}
-	public void setNomStagiaire(String nomStagiaire) {
-		this.nomStagiaire = nomStagiaire;
-	}
-	public String getPrenomStagiaire() {
-		return prenomStagiaire;
-	}
-	public void setPrenomStagiaire(String prenomStagiaire) {
-		this.prenomStagiaire = prenomStagiaire;
-	}
-	public String getMailStagiaire() {
-		return mailStagiaire;
-	}
-	public void setMailStagiaire(String mailStagiaire) {
-		this.mailStagiaire = mailStagiaire;
-	}
-	public String getTelStagiaire() {
-		return telStagiaire;
-	}
-	public void setTelStagiaire(String telStagiaire) {
-		this.telStagiaire = telStagiaire;
-	}
-	public int getIdEntreprise() {
-		return idEntreprise;
-	}
-	public void setIdEntreprise(int idEntreprise) {
-		this.idEntreprise = idEntreprise;
-	}
-	
-	public Stagiaire(int idStagiaire, String nomStagiaire, String prenomStagiaire, String mailStagiaire,
-			String telStagiaire, int idEntreprise) {
+	private Integer id;
+	private String nom;
+	private String prenom;
+	private String mail;
+	private String tel;
+	private Entreprise entreprise;
+
+	/**
+	 * @param id
+	 * @param nom
+	 * @param prenom
+	 * @param mail
+	 * @param tel
+	 * @param entreprise
+	 */
+	public Stagiaire(Integer id, String nom, String prenom, String mail, String tel, Entreprise entreprise) {
 		super();
-		this.idStagiaire = idStagiaire;
-		this.nomStagiaire = nomStagiaire;
-		this.prenomStagiaire = prenomStagiaire;
-		this.mailStagiaire = mailStagiaire;
-		this.telStagiaire = telStagiaire;
-		this.idEntreprise = idEntreprise;
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.mail = mail;
+		this.tel = tel;
+		this.entreprise = entreprise;
 	}
+
 	public Stagiaire() {
-		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-	
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Formateur [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", mail=" + mail + ", tel=" + tel + "]";
+	}
+
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the nom
+	 */
+	public String getNom() {
+		return nom;
+	}
+
+	/**
+	 * @param nom the nom to set
+	 */
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	/**
+	 * @return the prenom
+	 */
+	public String getPrenom() {
+		return prenom;
+	}
+
+	/**
+	 * @param prenom the prenom to set
+	 */
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	/**
+	 * @return the mail
+	 */
+	public String getMail() {
+		return mail;
+	}
+
+	/**
+	 * @param mail the mail to set
+	 */
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+
+	/**
+	 * @return the tel
+	 */
+	public String getTel() {
+		return tel;
+	}
+
+	/**
+	 * @param tel the tel to set
+	 */
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+
 }
