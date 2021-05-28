@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+	<context:annotation-config></context:annotation-config>
+	<tx:annotation-driven
+		transaction-manager="txManager" />
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="com.p6spy.engine.spy.P6SpyDriver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/filrouge" />
+		<property name="username" value="filrouge" />
+		<property name="password" value="password" />
+	</bean>
+
+	<bean id="myEmf"
+		class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
+		<property name="persistenceUnitName"
+			value="projetFilRougeCommon" />
+	</bean>
+
+	<bean id="txManager"
+		class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="myEmf" />
+	</bean>
+	<!-- the transactional advice (what 'happens'; see the <aop:advisor/> bean 
+		below) -->
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<!-- the transactional semantics... -->
+		<tx:attributes>
+			<!-- all methods starting with 'get' are read-only -->
+			<tx:method name="*" read-only="true" />
+			<!-- other methods use the default transaction settings (see below) -->
+			<tx:method name="save*" read-only="false" />
+			<tx:method name="update*" read-only="false" />
+			<tx:method name="remove*" read-only="false" />
+			<tx:method name="delete*" read-only="false" />
+		</tx:attributes>
+	</tx:advice>
+
+	<bean id="dateFormat" class="java.text.SimpleDateFormat">
+		<constructor-arg value="yyyy-MM-dd" />
+	</bean>
+
+
+	<bean id="themeFacade"
+		class="com.ib.projetFilRougeCommon.facade.ThemeFacade">
+		<property name="themeDAO">
+			<ref bean="themeDAO" />
+		</property>
+	</bean>
+	<bean id="themeDAO"
+		class="com.ib.projetFilRougeCommon.dao.ThemeDAO">
+	</bean>
+	
+	<bean id="moduleFacade"
+		class="com.ib.projetFilRougeCommon.facade.ModuleFacade">
+		<property name="moduleDAO">
+			<ref bean="moduleDAO" />
+		</property>
+	</bean>
+	<bean id="moduleDAO"
+		class="com.ib.projetFilRougeCommon.dao.ModuleDAO">
+	</bean>
+
+	<bean id="salleFacade"
+		class="com.ib.projetFilRougeCommon.facade.SalleFacade">
+		<property name="salleDAO">
+			<ref bean="salleDAO" />
+		</property>
+	</bean>
+	<bean id="salleDAO"
+		class="com.ib.projetFilRougeCommon.dao.SalleDAO">
+	</bean>
+
+	<bean id="entrepriseFacade"
+		class="com.ib.projetFilRougeCommon.facade.EntrepriseFacade">
+		<property name="entrepriseDAO">
+			<ref bean="entrepriseDAO" />
+		</property>
+	</bean>
+	<bean id="entrepriseDAO"
+		class="com.ib.projetFilRougeCommon.dao.EntrepriseDAO">
+	</bean>
+
+	<bean id="formateurFacade"
+		class="com.ib.projetFilRougeCommon.facade.FormateurFacade">
+		<property name="formateurDAO">
+			<ref bean="formateurDAO" />
+		</property>
+	</bean>
+	<bean id="formateurDAO"
+		class="com.ib.projetFilRougeCommon.dao.FormateurDAO">
+	</bean>
+
+	
+
+	<bean id="parcoursFacade"
+		class="com.ib.projetFilRougeCommon.facade.ParcoursFacade">
+		<property name="parcoursDAO">
+			<ref bean="parcoursDAO" />
+		</property>
+	</bean>
+	<bean id="parcoursDAO"
+		class="com.ib.projetFilRougeCommon.dao.ParcoursDAO">
+	</bean>
+
+	<bean id="responsableFacade"
+		class="com.ib.projetFilRougeCommon.facade.ResponsableFacade">
+		<property name="responsableDAO">
+			<ref bean="responsableDAO" />
+		</property>
+	</bean>
+	<bean id="responsableDAO"
+		class="com.ib.projetFilRougeCommon.dao.ResponsableDAO">
+	</bean>
+
+	<bean id="sessionFacade"
+		class="com.ib.projetFilRougeCommon.facade.SessionFacade">
+		<property name="sessionDAO">
+			<ref bean="sessionDAO" />
+		</property>
+	</bean>
+	<bean id="sessionDAO"
+		class="com.ib.projetFilRougeCommon.dao.SessionDAO">
+	</bean>
+
+	<bean id="stagiaireFacade"
+		class="com.ib.projetFilRougeCommon.facade.StagiaireFacade">
+		<property name="stagiaireDAO">
+			<ref bean="stagiaireDAO" />
+		</property>
+	</bean>
+	<bean id="stagiaireDAO"
+		class="com.ib.projetFilRougeCommon.dao.StagiaireDAO">
+	</bean>
+</beans>
