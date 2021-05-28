@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+
+	<import resource="classpath:/applicationContextCommon.xml"/>
+	
+	<bean id="themeService"
+		class="com.ib.projetfilrougers.service.ThemeService">
+		<property name="themeFacade" ref="themeFacade"></property>
+	</bean>
+	
+	<bean id="salleService"
+		class="com.ib.projetfilrougers.service.SalleService">
+		<property name="salleFacade" ref="salleFacade"></property>
+ 	</bean> 
+	<bean id="entrepriseService"
+		class="com.ib.projetfilrougers.service.EntrepriseService">
+	<property name="entrepriseFacade" ref="entrepriseFacade"></property>
+	</bean>
+	<bean id="formateurService"
+		class="com.ib.projetfilrougers.service.FormateurService">
+	<property name="formateurFacade" ref="formateurFacade"></property>
+	</bean>
+	<bean id="moduleService"
+		class="com.ib.projetfilrougers.service.ModuleService">
+	<property name="moduleFacade" ref="moduleFacade"></property>
+	</bean>
+	<bean id="parcoursService"
+		class="com.ib.projetfilrougers.service.ParcoursService">
+	
+	<property name="parcoursFacade" ref="parcoursFacade"></property>
+	</bean>
+	<bean id="responsableService"
+		class="com.ib.projetfilrougers.service.ResponsableService">
+	<property name="responsableFacade" ref="responsableFacade"></property>
+	</bean>
+	<bean id="sessionService"
+		class="com.ib.projetfilrougers.service.SessionService">
+	<property name="sessionFacade" ref="sessionFacade"></property>
+	</bean>
+	<bean id="stagiaireService"
+		class="com.ib.projetfilrougers.service.StagiaireService">
+	<property name="stagiaireFacade" ref="stagiaireFacade"></property>
+	</bean>
+</beans>
