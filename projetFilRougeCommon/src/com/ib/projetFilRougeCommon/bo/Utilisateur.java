@@ -43,6 +43,8 @@ public class Utilisateur implements Serializable {
 	private String login;
 	@XmlAttribute
 	private String password;
+	@XmlAttribute
+	private Integer idStagiaire;
 	@ManyToMany(fetch = FetchType.EAGER, cascade = { CascadeType.ALL })
 	@JoinTable(name = "utilisateur_role", joinColumns = @JoinColumn(name = "idUtilisateur", referencedColumnName = "idUtilisateur"), inverseJoinColumns = @JoinColumn(name = "idRole", referencedColumnName = "idRole", updatable = true))
 	private List<Role> roles = new ArrayList<Role>();
@@ -80,27 +82,15 @@ public class Utilisateur implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Utilisateur(Integer idUtilisateur, String nom, String prenom, String login, String password) {
+	public Utilisateur(Integer idUtilisateur, String nom, String prenom, String login, String password,
+			Integer idStagiaire) {
 		super();
 		this.idUtilisateur = idUtilisateur;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.login = login;
 		this.password = password;
-	}
-
-	/**
-	 * @return the idUtilisateur
-	 */
-	public Integer getId() {
-		return idUtilisateur;
-	}
-
-	/**
-	 * @param idUtilisateur the idUtilisateur to set
-	 */
-	public void setId(Integer idUtilisateur) {
-		this.idUtilisateur = idUtilisateur;
+		this.idStagiaire = idStagiaire;
 	}
 
 	/**
@@ -131,10 +121,38 @@ public class Utilisateur implements Serializable {
 		this.prenom = prenom;
 	}
 
+	/**
+	 * @return the idUtilisateur
+	 */
+	public Integer getIdUtilisateur() {
+		return idUtilisateur;
+	}
+
+	/**
+	 * @param idUtilisateur the idUtilisateur to set
+	 */
+	public void setIdUtilisateur(Integer idUtilisateur) {
+		this.idUtilisateur = idUtilisateur;
+	}
+
+	/**
+	 * @return the idStagiaire
+	 */
+	public Integer getIdStagiaire() {
+		return idStagiaire;
+	}
+
+	/**
+	 * @param idStagiaire the idStagiaire to set
+	 */
+	public void setIdStagiaire(Integer idStagiaire) {
+		this.idStagiaire = idStagiaire;
+	}
+
 	@Override
 	public String toString() {
 		return "Utilisateur [idUtilisateur=" + idUtilisateur + ", nom=" + nom + ", prenom=" + prenom + ", login="
-				+ login + ", password=" + password + "]";
+				+ login + ", password=" + password + ", idStagiaire=" + idStagiaire + ", roles=" + roles + "]";
 	}
 
 	/**

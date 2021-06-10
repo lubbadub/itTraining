@@ -11,7 +11,11 @@ public class Salle implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -71160700647876532L;
+	private static final long serialVersionUID = 2933029934198637053L;
+	/**
+	 * 
+	 */
+
 	@Id
 	private Integer idSalle;
 	private String ville;

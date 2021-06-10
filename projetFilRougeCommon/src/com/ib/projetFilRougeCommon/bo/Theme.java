@@ -25,7 +25,11 @@ public class Theme implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 632717809271888697L;
+	private static final long serialVersionUID = -8141381651151440783L;
+	/**
+	 * 
+	 */
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@XmlAttribute

@@ -13,6 +13,7 @@
 		<class>com.ib.projetFilRougeCommon.bo.Appartient</class>
 		<class>com.ib.projetFilRougeCommon.bo.Role</class>
 		<class>com.ib.projetFilRougeCommon.bo.Utilisateur</class>
+		<class>com.ib.projetFilRougeCommon.bo.ParticipeSession</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.p6spy.engine.spy.P6SpyDriver"/> 
 			<property name="javax.persistence.jdbc.url" value="jdbc:p6spy:mysql://localhost:3306/filrouge"/>

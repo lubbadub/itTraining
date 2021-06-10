@@ -9,7 +9,7 @@
 <%@include file="head/head.jsp"%>
 </head>
 <body onload="initPage()">
-
+	<input type="hidden" id="idSession" name="idSession" value=${sessionScope.session.id }/>
 	<div id="page">
 
 		<jsp:include page="header/header.jsp"></jsp:include>
@@ -36,6 +36,10 @@
 				<p>
 					<label>Pr&eacute;nom : </label><input type="text" name="prenom"
 						placeholder="Saisir votre prenom" title="Saisir votre prenom" />
+				</p>
+				<p>
+					<label>Mot de passe : </label><input type="password" name="password"
+						placeholder="Saisir votre mot de passe" title="Saisir votre mot de passe" />
 				</p>
 				<p>
 					<label>Mail : </label><input type="text" name="mail"

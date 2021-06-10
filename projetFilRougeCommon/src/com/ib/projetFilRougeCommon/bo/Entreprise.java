@@ -11,7 +11,14 @@ public class Entreprise implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 7835218165292280616L;
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 675619200102178343L;
+	/**
+	 * 
+	 */
 	@Id
 	private Integer idEntreprise;
 	private String nom;

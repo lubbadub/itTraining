@@ -18,7 +18,11 @@ public class Parcours implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 6167130170167460032L;
+	private static final long serialVersionUID = 7632620152882276289L;
+	/**
+	 * 
+	 */
+
 	@Id
 	private Integer idParcours;
 	private String nom;

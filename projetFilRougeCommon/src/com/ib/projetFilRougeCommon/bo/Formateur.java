@@ -12,7 +12,10 @@ public class Formateur implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 6726256994051733548L;
+	private static final long serialVersionUID = 6543293023549702183L;
+	/**
+	 * 
+	 */
 	@Id
 	private Integer idFormateur;
 	private String nom;
@@ -21,7 +24,7 @@ public class Formateur implements Serializable {
 	private String adr;
 	private String tel;
 	private Date datePremiereSession;
-	private double formateur;
+	// private double formateur;
 	private Boolean isNouveau;
 
 	/**
@@ -36,7 +39,7 @@ public class Formateur implements Serializable {
 	 * @param isNouveau
 	 */
 	public Formateur(Integer idFormateur, String nom, String prenom, String mail, String adr, String tel,
-			Date datePremiereSession, double formateur, Boolean isNouveau) {
+			Date datePremiereSession, Boolean isNouveau) {
 		super();
 		this.idFormateur = idFormateur;
 		this.nom = nom;
@@ -45,7 +48,6 @@ public class Formateur implements Serializable {
 		this.adr = adr;
 		this.tel = tel;
 		this.datePremiereSession = datePremiereSession;
-		this.formateur = formateur;
 		this.isNouveau = isNouveau;
 	}
 
@@ -56,8 +58,8 @@ public class Formateur implements Serializable {
 	@Override
 	public String toString() {
 		return "Formateur [idFormateur=" + idFormateur + ", nom=" + nom + ", prenom=" + prenom + ", mail=" + mail
-				+ ", adr=" + adr + ", tel=" + tel + ", datePremiereSession=" + datePremiereSession + ", formateur="
-				+ formateur + ", isNouveau=" + isNouveau + "]";
+				+ ", adr=" + adr + ", tel=" + tel + ", datePremiereSession=" + datePremiereSession + ", isNouveau="
+				+ isNouveau + "]";
 	}
 
 	/**
@@ -156,20 +158,6 @@ public class Formateur implements Serializable {
 	 */
 	public void setDatePremiereSession(Date datePremiereSession) {
 		this.datePremiereSession = datePremiereSession;
-	}
-
-	/**
-	 * @return the formateur
-	 */
-	public double getFormateur() {
-		return formateur;
-	}
-
-	/**
-	 * @param formateur the formateur to set
-	 */
-	public void setFormateur(double formateur) {
-		this.formateur = formateur;
 	}
 
 	/**

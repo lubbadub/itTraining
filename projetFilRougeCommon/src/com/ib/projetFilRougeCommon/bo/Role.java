@@ -16,7 +16,11 @@ public class Role implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -6070082715311582210L;
+	private static final long serialVersionUID = 2902324155306429675L;
+	/**
+	 * 
+	 */
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected Integer idRole;

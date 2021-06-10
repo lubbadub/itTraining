@@ -11,7 +11,10 @@ public class Module implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -128523932009422971L;
+	private static final long serialVersionUID = 8385197542914801890L;
+	/**
+	 * 
+	 */
 	@Id
 	private Integer idModule;
 	private String nom;

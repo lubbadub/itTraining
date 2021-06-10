@@ -45,8 +45,8 @@ public class UtilisateurFacade implements IUtilisateurFacade {
 
 	@Override
 	public Utilisateur get(Integer id) {
-
-		return null;
+		Utilisateur utilisateur = utilisateurDAO.get(id);
+		return utilisateur;
 	}
 
 	/**

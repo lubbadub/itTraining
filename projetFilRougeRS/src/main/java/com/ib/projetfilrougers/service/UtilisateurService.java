@@ -46,7 +46,7 @@ public class UtilisateurService {
 	@DELETE
 	@Path("{idUtilisateur}")
 	public String delete(@PathParam("idUtilisateur") Integer id) {
-		Utilisateur utilisateur = new Utilisateur(id, null, null, null, null);
+		Utilisateur utilisateur = new Utilisateur(id, null, null, null, null, null);
 		utilisateurFacade.delete(utilisateur);
 		return "ok";
 	}

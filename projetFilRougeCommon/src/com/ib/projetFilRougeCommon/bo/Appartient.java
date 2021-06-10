@@ -11,7 +11,10 @@ public class Appartient implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 7835218165292280616L;
+	private static final long serialVersionUID = -7065141227826241138L;
+	/**
+	 * 
+	 */
 	@Id
 	private Integer idTheme;
 	private Integer idModule;

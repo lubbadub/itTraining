@@ -19,7 +19,11 @@ public class Session implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -3051905911121932196L;
+	private static final long serialVersionUID = 880873079402171856L;
+	/**
+	 * 
+	 */
+
 	@Id
 	private Integer idSession;
 	private Date dateDeb;
@@ -31,7 +35,7 @@ public class Session implements Serializable {
 	@OneToOne
 	private Salle salle;
 	@ManyToMany(fetch = FetchType.EAGER, cascade = { CascadeType.ALL })
-	@JoinTable(name = "participe_session", joinColumns = @JoinColumn(name = "idSession", referencedColumnName = "idSession"), inverseJoinColumns = @JoinColumn(name = "idStagiaire", referencedColumnName = "idStagiaire", updatable = true))
+	@JoinTable(name = "participesession", joinColumns = @JoinColumn(name = "idSession", referencedColumnName = "idSession"), inverseJoinColumns = @JoinColumn(name = "idStagiaire", referencedColumnName = "idStagiaire", updatable = true))
 	private Set<Stagiaire> stagiaire = new HashSet<Stagiaire>();
 
 	public Session() {

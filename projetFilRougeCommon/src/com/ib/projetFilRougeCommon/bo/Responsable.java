@@ -11,7 +11,11 @@ public class Responsable implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 44571888049914391L;
+	private static final long serialVersionUID = 8937277703785583537L;
+	/**
+	 * 
+	 */
+
 	@Id
 	private Integer idResponsable;
 	private String nom;

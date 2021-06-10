@@ -13,7 +13,11 @@ public class Stagiaire implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -2860601176483322167L;
+	private static final long serialVersionUID = -8592874645461993239L;
+	/**
+	 * 
+	 */
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idStagiaire;

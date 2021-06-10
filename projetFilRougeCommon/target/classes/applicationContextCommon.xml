@@ -62,7 +62,7 @@
 	<bean id="themeDAO"
 		class="com.ib.projetFilRougeCommon.dao.ThemeDAO">
 	</bean>
-	
+
 	<bean id="moduleFacade"
 		class="com.ib.projetFilRougeCommon.facade.ModuleFacade">
 		<property name="moduleDAO">
@@ -103,7 +103,7 @@
 		class="com.ib.projetFilRougeCommon.dao.FormateurDAO">
 	</bean>
 
-	
+
 
 	<bean id="parcoursFacade"
 		class="com.ib.projetFilRougeCommon.facade.ParcoursFacade">
@@ -144,7 +144,7 @@
 	<bean id="stagiaireDAO"
 		class="com.ib.projetFilRougeCommon.dao.StagiaireDAO">
 	</bean>
-	
+
 	<bean id="appartientFacade"
 		class="com.ib.projetFilRougeCommon.facade.AppartientFacade">
 		<property name="appartientDAO">
@@ -154,7 +154,7 @@
 	<bean id="appartientDAO"
 		class="com.ib.projetFilRougeCommon.dao.AppartientDAO">
 	</bean>
-	
+
 	<bean id="utilisateurFacade"
 		class="com.ib.projetFilRougeCommon.facade.UtilisateurFacade">
 		<property name="utilisateurDAO">
@@ -163,5 +163,15 @@
 	</bean>
 	<bean id="utilisateurDAO"
 		class="com.ib.projetFilRougeCommon.dao.UtilisateurDAO">
+	</bean>
+
+	<bean id="participesessionFacade"
+		class="com.ib.projetFilRougeCommon.facade.ParticipeSessionFacade">
+		<property name="participesessionDAO">
+			<ref bean="participesessionDAO" />
+		</property>
+	</bean>
+	<bean id="participesessionDAO"
+		class="com.ib.projetFilRougeCommon.dao.ParticipeSessionDAO">
 	</bean>
 </beans>
