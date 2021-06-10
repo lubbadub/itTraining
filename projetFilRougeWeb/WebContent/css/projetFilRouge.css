@@ -332,3 +332,7 @@ body>section>fieldset>p>label {
 #session{
 	float: left;
 }
+.erreur{
+	color: red;
+	font-weight: bold;
+}

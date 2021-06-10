@@ -144,4 +144,24 @@
 	<bean id="stagiaireDAO"
 		class="com.ib.projetFilRougeCommon.dao.StagiaireDAO">
 	</bean>
+	
+	<bean id="appartientFacade"
+		class="com.ib.projetFilRougeCommon.facade.AppartientFacade">
+		<property name="appartientDAO">
+			<ref bean="appartientDAO" />
+		</property>
+	</bean>
+	<bean id="appartientDAO"
+		class="com.ib.projetFilRougeCommon.dao.AppartientDAO">
+	</bean>
+	
+	<bean id="utilisateurFacade"
+		class="com.ib.projetFilRougeCommon.facade.UtilisateurFacade">
+		<property name="utilisateurDAO">
+			<ref bean="utilisateurDAO" />
+		</property>
+	</bean>
+	<bean id="utilisateurDAO"
+		class="com.ib.projetFilRougeCommon.dao.UtilisateurDAO">
+	</bean>
 </beans>

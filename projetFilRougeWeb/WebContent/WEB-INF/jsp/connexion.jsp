@@ -23,6 +23,17 @@
 				<label>Mot de passe : </label><input type="password"
 					name="motDePasse" placeholder="Mot de passe" title="Mot de passe" />
 			</p>
+			<p>Selectionnez un role </p>
+			<div>
+				<input type="radio" id="Stagiaire" name="role" value="Stagiaire" checked>
+				<label for="Stagiaire">Stagiaire</label>
+			</div>
+
+			<div>
+				<input type="radio" id="Responsable" name="role" value="Responsable"> <label
+					for="Responsable">Responsable</label>
+			</div>
+
 			<input type="submit" value="Connexion" />
 		</form>
 

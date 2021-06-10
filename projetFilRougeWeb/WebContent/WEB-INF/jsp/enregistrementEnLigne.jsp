@@ -1,6 +1,7 @@
-F<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,19 +16,19 @@ F<%@ page language="java" contentType="text/html; charset=UTF-8"
 		<%@include file="nav/nav.jsp"%>
 
 		<p id="sessionChoisie">
-			<label>Session choisie : </label>Session xyz
+			<label>Session choisie : </label>${sessionScope.session.id } du module ${sessionScope.session.module.nom }
 		</p>
 		<p id="villeSessionChoisie">
-			<label>Ville : </label>Ville xyz
+			<label>Ville : </label> ${sessionScope.session.salle.ville} 
 		</p>
 		<p id="dateSessionChoisie">
-			<label>Date : </label> xx/xx/xx
+			<label>Date de d&eacute;but : </label><fmt:formatDate value="${sessionScope.session.dateDeb }" pattern="dd/MM/yyyy" />
 		</p>
 
-
-		<form action="#inscription" method="post" id="enregistrementForm">
+		<form action="enregistrementEnLigne" method="post" id="enregistrementForm">
 			<fieldset>
 				<legend>Coordonn&eacute;es participant</legend>
+		<p class="erreur"><c:out value="${requestScope.erreur }" escapeXml="false"></c:out></p>
 				<p>
 					<label>Nom : </label><input type="text" name="nom"
 						placeholder="Saisir votre nom" title="Saisir votre nom" />
@@ -45,18 +46,18 @@ F<%@ page language="java" contentType="text/html; charset=UTF-8"
 						name="tel" placeholder="Saisir votre t&eacute;l&eacute;phone"
 						title="Saisir votre t&eacute;l&eacute;phone" />
 				</p>
-				<p>
-					<label>Entreprise : </label><input type="text" name="entreprise"
-						placeholder="Saisir votre entreprise"
-						title="Saisir votre entreprise" />
-				</p>
-				<p>
-					<label>Session intra-entreprise ? </label><input type="checkbox"
-						name="intra" />
-				</p>
+<!-- 				<p> -->
+<!-- 					<label>Entreprise : </label><input type="text" name="entreprise" -->
+<!-- 						placeholder="Saisir votre entreprise" -->
+<!-- 						title="Saisir votre entreprise" /> -->
+<!-- 				</p> -->
+<!-- 				<p> -->
+<!-- 					<label>Session intra-entreprise ? </label><input type="checkbox" -->
+<!-- 						name="intra" /> -->
+<!-- 				</p> -->
 			</fieldset>
-			<input type="submit" value="S'inscrire" /><br /> <a
-				href="#testPreRequis">Passer le test de pr&eacute;-requis</a>
+ 			<input type="submit" value="S'inscrire" /><br /> 
+ 			<!-- <a href="#testPreRequis">Passer le test de pr&eacute;-requis</a> -->
 		</form>
 
 	</div>

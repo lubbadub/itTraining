@@ -48,4 +48,12 @@
 		class="com.ib.projetfilrougers.service.StagiaireService">
 	<property name="stagiaireFacade" ref="stagiaireFacade"></property>
 	</bean>
+	<bean id="appartientService"
+		class="com.ib.projetfilrougers.service.AppartientService">
+	<property name="appartientFacade" ref="appartientFacade"></property>
+	</bean>
+	<bean id="utilisateurService"
+		class="com.ib.projetfilrougers.service.UtilisateurService">
+	<property name="utilisateurFacade" ref="utilisateurFacade"></property>
+	</bean>
 </beans>
