@@ -16,14 +16,14 @@
 
 		<form action="connexion" id="connexionForm" method="post">
 			<p>
-				<label>Email : </label><input type="text" name="prenom"
-					placeholder="Email" title="Email" />
+				<label>Login : </label><input type="text" name="prenom"
+					placeholder="Login" title="Email" />
 			</p>
 			<p>
 				<label>Mot de passe : </label><input type="password"
 					name="motDePasse" placeholder="Mot de passe" title="Mot de passe" />
 			</p>
-			<p>Selectionnez un role </p>
+			<p>S&eacute;lectionnez un r&ocirc;le </p>
 			<div>
 				<input type="radio" id="Stagiaire" name="role" value="Stagiaire" checked>
 				<label for="Stagiaire">Stagiaire</label>
@@ -33,7 +33,7 @@
 				<input type="radio" id="Responsable" name="role" value="Responsable"> <label
 					for="Responsable">Responsable</label>
 			</div>
-
+			<br/>
 			<input type="submit" value="Connexion" />
 		</form>
 
