@@ -69,7 +69,7 @@
 <!-- 					<input type="date" /> -->
 <!-- 				</p> -->
 
-				<input type="submit" value="S'enregistrer en ligne" />
+				<input type="submit" value="S'enregistrer en ligne" class="boutonEnregistrement"/>
 			</div>
 		</form>
 
