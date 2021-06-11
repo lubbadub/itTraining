@@ -9,14 +9,16 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
-import com.ib.projetFilRougeCommon.bo.Stagiaire;
+import com.ib.projetFilRougeCommon.bo.Utilisateur;
 import com.ib.projetFilRougeCommon.facade.IStagiaireFacade;
+import com.ib.projetFilRougeCommon.facade.IUtilisateurFacade;
 
 /**
  * Servlet implementation class Accueil
@@ -26,6 +28,7 @@ public class Connexion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final Logger logger = LogManager.getLogger(Connexion.class);
 	private IStagiaireFacade stagiaireFacade;
+	private IUtilisateurFacade utilisateurFacade;
 
 	/**
 	 * Default constructor.
@@ -75,28 +78,54 @@ public class Connexion extends HttpServlet {
 		String responsable = "Responsable";
 
 		logger.debug("role " + role);
-		logger.debug("mdp " + motDePasse);
-		logger.debug("mail " + mail);
-		logger.debug("coucou");
 
+		HttpSession session = request.getSession();
+		session.setAttribute(responsable, session);
+		Utilisateur utilisateur = new Utilisateur();
+		List<Utilisateur> utilisateurs = utilisateurFacade.findAll();
+		boolean okLogin = false;
+
+		// On cherche si l'utilisateur est stagiaire et existe dans la bd
 		if (role.equals(stagiaire)) {
-			Stagiaire stagiaireLogin = new Stagiaire();
-			List<Stagiaire> stagiaires = stagiaireFacade.findAll();
-			for (int i = 0; i < stagiaires.size(); i++) {
+
+			for (int i = 0; i < utilisateurs.size(); i++) {
+				if (utilisateurs.get(i).getLogin().equals(mail) && utilisateurs.get(i).getPassword().equals(motDePasse)
+						&& utilisateurs.get(i).getIdStagiaire() != null) {
+					session.setAttribute("utilisateur", utilisateurs.get(i));
+					session.setAttribute("role", "Stagiaire");
+					okLogin = true;
+					break;
+				}
 
 			}
 
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/connexionEtudiant.jsp");
-			// forward vers la jsp de la reponse
-			requestDispatcher.forward(request, response);
+			// On cherche si l'utilisateur est responsable et existe dans la bd
 		} else if (role.equals(responsable)) {
+			for (int i = 0; i < utilisateurs.size(); i++) {
+				if (utilisateurs.get(i).getLogin().equals(mail) && utilisateurs.get(i).getPassword().equals(motDePasse)
+						&& utilisateurs.get(i).getIdStagiaire() == null) {
+					session.setAttribute("utilisateur", utilisateurs.get(i));
+					session.setAttribute("role", "Responsable");
+
+					okLogin = true;
+					break;
+				}
+			}
+		}
+
+		// Si l'on a trouvé l'utilisateur
+		if (okLogin == true) {
 			// recuperation du dispatcher
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/connexionOk.jsp");
+			// forward vers la jsp de la reponse
 			requestDispatcher.forward(request, response);
 		} else {
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/erreur/erreur404.jsp");
+			// recuperation du dispatcher
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/erreur/erreur404.jsp");
+			// forward vers la jsp de la reponse
 			requestDispatcher.forward(request, response);
 		}
+
 	}
 
 	/**
@@ -112,6 +141,15 @@ public class Connexion extends HttpServlet {
 	@Autowired
 	public void setStagiaireFacade(IStagiaireFacade stagiaireFacade) {
 		this.stagiaireFacade = stagiaireFacade;
+	}
+
+	public IUtilisateurFacade getUtilisateurFacade() {
+		return utilisateurFacade;
+	}
+
+	@Autowired
+	public void setUtilisateurFacade(IUtilisateurFacade utilisateurFacade) {
+		this.utilisateurFacade = utilisateurFacade;
 	}
 
 }

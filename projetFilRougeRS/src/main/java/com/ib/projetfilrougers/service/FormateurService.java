@@ -46,7 +46,7 @@ public class FormateurService {
 	@DELETE
 	@Path("{idFormateur}")
 	public String delete(@PathParam("idFormateur") Integer idFormateur) {
-		Formateur formateur = new Formateur(idFormateur, null, null, null, null, null, null, 0, null);
+		Formateur formateur = new Formateur(idFormateur, null, null, null, null, null, null, null);
 		formateurFacade.delete(formateur);
 		return "ok";
 	}

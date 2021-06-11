@@ -15,10 +15,9 @@ public class FormateurBouchonDAO implements IFormateurDAO {
 
 		// bouchon
 		Formateur formateur = new Formateur(750, " jean", "jeansgs", "batiste@pipe.fr", "122bshs", "122bshs",
-				new Date(), 0, true);
+				new Date(), true);
 		formateurs.add(formateur);
-		formateur = new Formateur(750, " jean", "jeansgs", "batiste@pipe.fr", "122bshs", "122bshs", new Date(), 0,
-				true);
+		formateur = new Formateur(750, " jean", "jeansgs", "batiste@pipe.fr", "122bshs", "122bshs", new Date(), true);
 		formateurs.add(formateur);
 
 		return formateurs;

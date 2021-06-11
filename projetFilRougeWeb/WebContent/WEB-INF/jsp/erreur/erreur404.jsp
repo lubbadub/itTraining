@@ -15,7 +15,7 @@
 		<jsp:include page="../header/header.jsp"></jsp:include>
 		<%@include file="../nav/nav.jsp" %>
 		
-		<h1>LA PAGE EXISTE PAS POTO</h1>
+		<p align="center"><img src="images/erreur404.png" /></p>
 		
 		
 	</div>

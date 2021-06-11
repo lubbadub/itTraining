@@ -68,7 +68,7 @@ public class EnregistrementEnLigne extends HttpServlet {
 		String erreur = "";
 
 		// recuperation du dispatcher
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/enregistrementEnLigne.jsp");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/jsp/enregistrementEnLigneOk.jsp");
 
 		// recuperation du nom
 		String nom = request.getParameter("nom");
