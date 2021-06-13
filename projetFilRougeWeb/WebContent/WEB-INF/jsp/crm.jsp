@@ -17,37 +17,38 @@
 	<fieldset id="remontee">
 		<legend>Remontées clients</legend>
 		<ul>
-			<li><fieldset><legend>Client 1</legend>
+			<li><fieldset><legend>Pierre G.</legend>
 				<p>Demande formation</p>
 			</fieldset></li>
-			<li><fieldset><legend>Client 2</legend>
+			<li><fieldset><legend>Clemence A.</legend>
 				<p>Demande informations</p>
 			</fieldset></li>
-			<li><fieldset><legend>Client 3</legend>
+			<li><fieldset><legend>Jean B.</legend>
 				<p>Question</p>
 			</fieldset></li>
-			<li><fieldset><legend>Client 4</legend>
+			<li><fieldset><legend>Julie T.</legend>
 				<p>Evaluation</p>
 			</fieldset></li>
-			<li><fieldset><legend>Client 5</legend>
+			<li><fieldset><legend>Michel P.</legend>
 				<p>Demande formation intra</p>
 			</fieldset></li>
-			<li>...</li>
+			<li></li>
 		</ul>
 	</fieldset>
+	<br/>
 	<table id="indicateur">
 		<tr>
 			<th colspan="3" id="commerciaux">Indicateurs commerciaux</th>
 		</tr>
 		<tr>
-			<td>Nombre stagiaires en formation: xyz</td>
-			<td>Formation en cours: xyz</td>
-			<td>Chiffre d'affaires: xyz</td>
+			<td>Nombre stagiaires en formation: 94</td>
+			<td>Formation en cours: 7</td>
+			<td>Chiffre d'affaires: 643 500€</td>
 		</tr>
 		<tr>
-			<td>Nombre stagiaires à venir: xyz</td>
-			<td>Formation planifies : xyz</td>
-			<td>Formations complétées: xyz</td>
+			<td>Nombre stagiaires à venir: 86</td>
+			<td>Formation planifies : 8</td>
+			<td>Formations complétées: 85</td>
 		</tr>
 	</table>
 		

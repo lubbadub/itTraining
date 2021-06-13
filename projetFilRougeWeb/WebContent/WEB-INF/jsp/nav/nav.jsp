@@ -1,8 +1,8 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <nav>
 	<ul>
-		<li><a href="catalogue" title="catalogue">Catalogue</a></li>
-		<li><a href="contact" title="contact">Contact</a></li>
+		<li><a href="catalogue" title="catalogue">CATALOGUE</a></li>
+		<li><a href="contact" title="contact">CONTACT</a></li>
 <!-- 		<li><input type="text" id="rechercher" name="recherche" -->
 <!-- 			placeholder="Rechercher" title="Rechercher" /> <a href="#recherche" -->
 <!-- 			title="Rechercher"> <svg xmlns="http://www.w3.org/2000/svg" -->

@@ -15,16 +15,16 @@
 		<%@include file="nav/nav.jsp"%>
 
 		<div>
-			<h1>Session XYZ</h1>
+			<h2>Session 14 - Base de donn&eacute;es</h2>
 			<p>1 : médiocre 5: excellent</p>
 		</div>
-		<p>
-			<select id="monselect">
-				<option value="valeur1">Jean Bont</option>
-				<option value="valeur2" selected>Claud Haut</option>
-				<option value="valeur3">Rémi Molle</option>
-			</select>
-		</p>
+<!-- 		<p> -->
+<!-- 			<select id="monselect"> -->
+<!-- 				<option value="valeur1">Jean Bont</option> -->
+<!-- 				<option value="valeur2" selected>Claud Haut</option> -->
+<!-- 				<option value="valeur3">Rémi Molle</option> -->
+<!-- 			</select> -->
+<!-- 		</p> -->
 
 		<form action="#evaluation" id="evalForm" method="post">
 			<fieldset id="evals">
@@ -56,7 +56,7 @@
 				</div>
 
 				<div id="evalContenu">
-					<label>Evaluation contenu</label>
+					<label>Evaluation Contenu</label>
 					<p>
 						<input type="radio" id="1" name="contenu" value="1"> <label
 							for="1">1</label> <input type="radio" id="2" name="contenu"
@@ -69,7 +69,7 @@
 				</div>
 
 				<div id="evalFormateur">
-					<label>Evaluation formateur</label>
+					<label>Evaluation Formateur</label>
 					<p>
 						<input type="radio" id="1" name="formateur" value="1"> <label
 							for="1">1</label> <input type="radio" id="2" name="formateur"
@@ -81,7 +81,8 @@
 					</p>
 				</div>
 			</fieldset>
-			<input type="submit" value="Soumettre" id="soumettre">
+			<br/>
+			<input type="submit" class="boutonEnregistrement" value="Soumettre" id="soumettre">
 		</form>
 
 	</div>

@@ -81,7 +81,7 @@ public class Connexion extends HttpServlet {
 
 		HttpSession session = request.getSession();
 		session.setAttribute(responsable, session);
-		Utilisateur utilisateur = new Utilisateur();
+		// Utilisateur utilisateur = new Utilisateur();
 		List<Utilisateur> utilisateurs = utilisateurFacade.findAll();
 		boolean okLogin = false;
 

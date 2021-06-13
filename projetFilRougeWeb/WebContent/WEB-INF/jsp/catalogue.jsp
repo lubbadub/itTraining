@@ -31,21 +31,16 @@
 				<legend>Descriptif</legend>
 				<h4>Ojectifs</h4>
 				<p id="objectif">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-				dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit
-				amet, consectetur adipiscing elit
+
 				</p>
 				<h4>Pr&eacute;-requis</h4>
 				<p id="preRequis">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 				</p>
 				<h4>Programme</h4>
 				<p id="programme">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 				</p>
 				<h4>Prix</h4>
 				<p id="prix">
-				xxxx &euro;
 				</p>
 
 			</fieldset>

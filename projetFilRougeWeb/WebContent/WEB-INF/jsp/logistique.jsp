@@ -16,37 +16,45 @@
 
 		<section id="logistique">
 			<fieldset>
+			<legend>Session</legend>
 				<p>
 					<label>Formation inter-entreprise ou intra-entreprise : </label> <input
-						type="radio" name="isInterIntra" value="inter" />inter-entreprise
+						type="radio" name="isInterIntra" value="inter" checked />inter-entreprise
 					<input type="radio" name="isInterIntra" value="intra" />intra-entreprise
 				</p>
 				<p>
-					<label>Session : </label> xyz
+					<label>Session : </label> 17
 				</p>
 				<p>
-					<label>Tarif : </label> xyz
+					<label>Tarif : </label> 5395€
 				</p>
 				<p>
-					<label>Sujet : </label> xyz
+					<label>Sujet : </label> D&eacute;veloppement .Net
 				</p>
 				<p>
-					<label>Date : </label> xyz
+					<label>Date : </label> 12/08/2021 au 19/08/2021
 				</p>
 				<p>
-					<label>Nombre de participants : </label> xyz
+					<label>Nombre de participants : </label> 12
 				</p>
 			</fieldset>
+			<br/>
 			<fieldset>
 				<legend>Formateur</legend>
 				<p>
-					<label>Date premi&egrave;re session : </label> xyz<br /> <label>Moyenne
-						obtenue : </label> xyz
+					<label>Nom : </label> John Snow
+				</p>
+				<p>
+					<label>Date premi&egrave;re session : </label> 15/04/2019
+				</p>
+				<p> 
+					<label>Moyenne obtenue : </label> 4.4 / 5
 				</p>
 			</fieldset>
 			<p>
-				<label>Annulation ?</label> <input type="button"
-					value="Annuler session" />
+				<label>Annulation ?</label>
+				<br/> 
+				<input type="button" value="Annuler session" />
 			</p>
 		</section>
 
